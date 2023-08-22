@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 26/9/20 8:56 PM
+  ~  */
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_nav_home" />
+        <item
+            android:id="@+id/nav_one"
+            android:icon="@drawable/ic_menu_one"
+            android:title="@string/menu_nav_one" />
+        <item
+            android:id="@+id/nav_two"
+            android:icon="@drawable/ic_menu_two"
+            android:title="@string/menu_nav_two" />
+        <item
+            android:id="@+id/nav_three"
+            android:icon="@drawable/ic_menu_three"
+            android:title="@string/menu_nav_three" />
+    </group>
+
+    <item android:title="@string/menu_nav_section_two_header">
+        <menu>
+            <item
+                android:id="@+id/nav_four"
+                android:icon="@drawable/ic_menu_four"
+                android:title="@string/menu_nav_four" />
+            <item
+                android:id="@+id/nav_five"
+                android:icon="@drawable/ic_menu_five"
+                android:title="@string/menu_nav_five" />
+
+            <item
+                android:id="@+id/nav_six"
+                android:icon="@drawable/ic_menu_six"
+                android:title="@string/menu_nav_six" />
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_menu_setting"
+                android:title="@string/menu_nav_setting" />
+        </menu>
+    </item>
+    <item android:title="@string/menu_nav_section_three_header">
+        <menu>
+            <item
+                android:id="@+id/nav_faq"
+                android:title="@string/menu_nav_faq" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/menu_nav_privacy_policy" />
+            <item
+                android:id="@+id/nav_terms_of_service"
+                android:title="@string/menu_nav_terms_of_service" />
+
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/menu_nav_about_us" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_item_version"
+        android:enabled="false"
+        android:gravity="right"
+        android:title="" />
+
+</menu>

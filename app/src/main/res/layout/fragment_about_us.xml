@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 27/9/20 12:34 AM
+  ~  */
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils" />
+        <variable
+            name="viewModel"
+            type="com.verma.android.common.viewmodel.AboutUsViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:background="@color/appBackground"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/parentLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/appBackground"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/officeLogoImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:layout_marginBottom="8dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_launcher" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:color/white"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/googlePlayLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="@{(view)-> viewModel.onClickGooglePlay(view)}"
+                            android:src="@drawable/ic_about_google_play_black_36dp"
+                            app:tint="#0097A7"
+                            android:visibility="@{TextUtils.isEmpty(viewModel.officeInfo.getGooglePlayUrl()) ? View.GONE : View.VISIBLE}" />
+
+                        <ImageView
+                            android:id="@+id/facebookLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="@{(view)-> viewModel.onClickFacebook(view)}"
+                            android:src="@drawable/ic_about_facebook_black_36dp"
+                            app:tint="#1976D2"
+                            android:visibility="@{TextUtils.isEmpty(viewModel.officeInfo.getFacebookPageUrl()) ? View.GONE : View.VISIBLE}" />
+
+                        <ImageView
+                            android:id="@+id/groupLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="@{(view)-> viewModel.onClickGroup(view)}"
+                            android:src="@drawable/ic_about_account_group_black_36dp"
+
+                            app:tint="#FBC02D"
+                            android:visibility="@{TextUtils.isEmpty(viewModel.officeInfo.getGroupUrl()) ? View.GONE : View.VISIBLE}" />
+
+                        <ImageView
+                            android:id="@+id/youtubeLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="@{(view)-> viewModel.onClickYoutube(view)}"
+                            android:src="@drawable/ic_about_youtube_black_36dp"
+
+                            app:tint="#D32F2F"
+                            android:visibility="@{TextUtils.isEmpty(viewModel.officeInfo.getYoutubeUrl()) ? View.GONE : View.VISIBLE}" />
+
+                        <ImageView
+                            android:id="@+id/githubLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="@{(view)-> viewModel.onClickGithub(view)}"
+                            android:src="@drawable/ic_about_github_circle_black_36dp"
+
+                            app:tint="#303F9F"
+                            android:visibility="@{TextUtils.isEmpty(viewModel.officeInfo.getGithubUrl()) ? View.GONE : View.VISIBLE}" />
+
+                        <ImageView
+                            android:id="@+id/webLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:onClick="@{(view)-> viewModel.onClickWeb(view)}"
+                            android:src="@drawable/ic_about_web_black_36dp"
+                            app:tint="#388E3C"
+                            android:visibility="@{TextUtils.isEmpty(viewModel.officeInfo.getWebUrl()) ? View.GONE : View.VISIBLE}" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/officeAboutRecyclerView"
+                    android:layout_width="match_parent"
+
+                    android:background="@color/appBackground"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

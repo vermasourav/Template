@@ -1,0 +1,92 @@
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 1/2/21 10:11 AM
+  ~  */
+  -->
+
+<resources>
+    <integer name="splash_time_out">5000</integer>
+    <color name="appBackground">@android:color/white</color>
+    <string name="my_name">KARN Amisha</string>
+
+    <string name="ads_id">ca-app-pub-5937141550883860~5553188392</string>
+    <string name="ads_unit_id">ca-app-pub-5937141550883860/8603707777</string>
+    <bool name="feature_ads">false</bool>
+    <bool name="feature_splash">true</bool>
+    <bool name="feature_onboarding">true</bool>
+
+    <bool name="feature_menu_one">true</bool>
+    <bool name="feature_menu_two">true</bool>
+    <bool name="feature_menu_three">true</bool>
+    <bool name="feature_menu_four">true</bool>
+    <bool name="feature_menu_five">true</bool>
+    <bool name="feature_menu_six">true</bool>
+    <bool name="feature_menu_setting">true</bool>
+    <bool name="feature_menu_about_us">true</bool>
+    <bool name="feature_menu_faq">true</bool>
+    <bool name="feature_menu_privacy">true</bool>
+    <bool name="feature_menu_terms_of_service">true</bool>
+    <bool name="feature_menu_version">true</bool>
+    <bool name="feature_rate_us">true</bool>
+    <bool name="feature_share_menu">false</bool>
+
+
+    <string name="menu_nav_home">Home</string>
+    <string name="menu_nav_one">One</string>
+    <string name="menu_nav_two">Two</string>
+    <string name="menu_nav_three">Three</string>
+    <string name="menu_nav_section_two_header">Communicate</string>
+    <string name="menu_nav_four">Share</string>
+    <string name="menu_nav_five">Send</string>
+    <string name="menu_nav_six">Six</string>
+    <string name="menu_nav_setting" translatable="false">Setting</string>
+    <string name="menu_nav_about_us">About us</string>
+    <string name="menu_nav_section_three_header" translatable="false">Others</string>
+    <string name="menu_nav_faq" translatable="false">FAQ</string>
+    <string name="menu_nav_privacy_policy" translatable="false">Privacy Policy</string>
+    <string name="menu_nav_terms_of_service" translatable="false">Terms Of Service</string>>
+    <string name="menu_rate_us" translatable="false">Rate Us</string>
+    <string name="menu_share_me" translatable="false">Share</string>
+
+    <string name="empty"> </string>
+    <string name="text_exit_request">Do you want to Exit?</string>
+
+
+    <string name="rate_dialog_title">Rate this app</string>
+    <string name="rate_dialog_message">If you enjoy this app, would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support!</string>
+    <string name="rate_dialog_ok">Rate It Now</string>
+    <string name="rate_dialog_cancel">Remind Me Later</string>
+    <string name="rate_dialog_no">No, Thanks</string>
+    <string name="new_rate_dialog_title">Rate Me!</string>
+    <string name="new_rate_dialog_never">Never</string>
+    <string name="new_rate_dialog_later">Later</string>
+    <string name="new_rate_dialog_ok">Rate</string>
+
+
+    <style name="CustomLollipopDialogStyle" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:buttonBarButtonStyle">@style/CustomButtonBarButtonStyle</item>
+        <item name="android:buttonBarStyle">@style/CustomButtonBarStyle</item>
+    </style>
+
+    <style name="CustomButtonBarStyle" parent="@android:style/Widget.Material.Light.ButtonBar.AlertDialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:height">@null</item>
+        <item name="android:minHeight">@null</item>
+    </style>
+
+    <style name="CustomButtonBarButtonStyle" parent="@android:style/Widget.Material.Light.Button.Borderless.Colored">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <!-- TODO: setting a fixed width as follows results in narrow buttons with line breaks, but of course this is not a solution -->
+        <item name="android:width">100dp</item>
+    </style>
+
+
+    <color name="dashboard_background_color">@color/appBackground</color>
+    <color name="dashboard_text_color">@android:color/black</color>
+    <dimen name="dashboard_image_max_height">80dp</dimen>
+    <dimen name="dashboard_image_max_width">80dp</dimen>
+</resources>

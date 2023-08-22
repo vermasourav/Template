@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 26/9/20 8:26 PM
+  ~  */
+  -->
+
+<selector xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <item android:state_pressed = "false">
+        <shape android:shape = "oval">
+            <solid android:color = "@android:color/transparent"/>
+        </shape>
+    </item>
+    <item android:state_pressed = "true">
+        <shape android:shape = "oval">
+            <solid android:color = "@android:color/holo_blue_light"/>
+        </shape>
+    </item>
+</selector>

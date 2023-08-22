@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 27/9/20 4:31 AM
+  ~  */
+  -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Splash">
+        <CheckBoxPreference
+            android:title="Checkbox"
+            android:defaultValue="false"
+            android:summary="True of False"
+            android:key="checkboxPref" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Profile" >
+
+        <EditTextPreference
+            android:title="Set IP Address"
+            android:summary="Set your IP Address"
+            android:defaultValue=" "
+            android:key="prefIpAddress"/>
+
+
+        <EditTextPreference
+        android:title="Set application name"
+        android:summary="Set your application name"
+        android:defaultValue="V1"
+        android:key="prefapipath"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

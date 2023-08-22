@@ -1,0 +1,36 @@
+/*
+ * *
+ *  * Created by Sourav Kumar Verma on 21/12/19 7:39 PM
+ *  * Copyright (c) 2019 . All rights reserved.
+ *  * Last modified 21/12/19 7:39 PM
+ *
+ */
+
+package com.verma.android.deps.service;
+
+public interface SharedKey {
+    String STRING_DEFAULT = "";
+    String KEY_STRING_SESSION_TOKEN = "KEY_STRING_SESSION_TOKEN";
+    String KEY_STRING_ACCOUNT_KIT_TOKEN = "token";
+    String KEY_STRING_FCM_REGISTRATION_TOKEN = "KEY_STRING_FCM_REGISTRATION_TOKEN";
+    String KEY_BOOLEAN_IS_FIRST_LAUNCH = "is_first_launch";
+    String KEY_BOOLEAN_IS_LOGIN = "is_login";
+    String KEY_BOOLEAN_SETTING_KEEP_ME_LOGIN = "KEY_BOOLEAN_SETTING_KEEP_ME_LOGIN";
+    String KEY_BOOLEAN_FIRST_LAUNCH = "KEY_BOOLEAN_FIRST_LAUNCH";
+
+    String KEY_STRING_USER_EMAIL = "KEY_STRING_USER_EMAIL";
+    String KEY_STRING_USER_NAME = "KEY_STRING_USER_NAME";
+
+
+    String KEY_STRING_LAST_LOGIN_USER = "KEY_STRING_LAST_LOGIN_USER";
+    String KEY_STRING_PUSH_NOTIFICATION_ID = "KEY_STRING_PUSH_NOTIFICATION_ID";
+
+    String KEY_STRING_LANGUAGE = "KEY_STRING_LANGUAGE";
+    String KEY_BOOLEAN_IS_TREMS_AND_CONDITION = "KEY_BOOLEAN_IS_TREMS_AND_CONDITION";
+    Boolean KEY_DEFAULT_TRUE = true;
+
+    String KEY_PREF_IP_ADDRESS = "prefIpAddress";
+    String KEY_PREF_API_PATH = "prefapipath";
+
+    String KEY_STRING_LANDING_HOME = "KEY_STRING_LANDING_HOME";
+}

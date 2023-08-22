@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 31/1/21 6:13 PM
+  ~  */
+  -->
+
+<full-backup-content>
+    <include domain="sharedpref" path="."/>
+</full-backup-content>

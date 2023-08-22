@@ -1,0 +1,151 @@
+{
+  "groups": [
+    {
+      "from": "",
+      "visible": true, "name": "Cupcake",
+      "image_url": "ic_launcher",
+      "childs": []
+    },
+
+
+    {
+      "from": "",
+      "visible": true, "name": "Donut",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "Eclair",
+      "image_url": "",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "Froyo",
+      "image_url": "",
+      "childs": []
+    },
+
+
+
+    {
+      "from": "",
+      "visible": true, "name": "Gingerbread",
+      "image_url": "",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "Honeycomb",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true, "name": "Ice Cream Sandwich",
+      "image_url": "",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "Jelly Bean",
+      "image_url": "",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "KitKat",
+      "image_url": "",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "Lollipop",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "Marshmallow",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true, "name": "Nougat",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },
+    {
+      "from": "",
+      "visible": true,  "name": "Oreo",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "Pie",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "Android 10.0",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "Android 11",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "Android 12",
+      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "Android 13",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "Android 14",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "Sourav Kumar Verma",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "F",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "I",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "H",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "J",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "K",
+      "image_url": "",
+      "childs": []
+    },{
+      "from": "",
+      "visible": true,  "name": "L",
+      "image_url": "",
+      "childs": []
+    }
+  ]
+}

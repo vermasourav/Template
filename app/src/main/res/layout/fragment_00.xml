@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 23/9/20 8:00 PM
+  ~  */
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/appBackground">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="35dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="@tools:sample/full_names"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollable"
+            android:background="@color/appBackground"
+            android:contentDescription="@string/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTop">
+
+            <GridLayout
+                android:id="@+id/dash_board_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:horizontalSpacing="8dp"
+                android:footerDividersEnabled="false"
+                android:columnOrderPreserved="false"
+                android:padding="8dp" />
+        </ScrollView>
+
+        <include
+            android:id="@+id/progressBar"
+            layout="@layout/layout_progress_bar"
+            tools:visibility="visible"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,17 @@
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 26/9/20 9:09 PM
+  ~  */
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="135"
+        android:centerColor="@color/colorPrimaryDark"
+        android:endColor="@color/colorPrimary"
+        android:startColor="@android:color/white"
+        android:type="linear" />
+</shape>

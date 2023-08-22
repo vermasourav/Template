@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by VERMA on 1/2/21 10:11 AM
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 26/9/20 7:02 PM
+  ~  */
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.verma.android.template.ui.menu.Menu00Fragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_00">
+        <action
+            android:id="@+id/action_nav_home_to_nav_two"
+            app:destination="@id/nav_one"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_one"
+        android:name="com.verma.android.template.ui.menu.Menu01Fragment"
+        android:label="@string/menu_nav_one"
+        tools:layout="@layout/fragment_01">
+        <argument
+            android:name="EXTRA_NOTE_ID"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_one_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:launchSingleTop="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_two"
+        android:name="com.verma.android.template.ui.menu.Menu02Fragment"
+        android:label="@string/menu_nav_two"
+        tools:layout="@layout/fragment_02" />
+
+    <fragment
+        android:id="@+id/nav_three"
+        android:name="com.verma.android.template.ui.menu.Menu03Fragment"
+        android:label="@string/menu_nav_three"
+        tools:layout="@layout/fragment_03" />
+
+    <fragment
+        android:id="@+id/nav_four"
+        android:name="com.verma.android.template.ui.menu.Menu04Fragment"
+        android:label="@string/menu_nav_four"
+        tools:layout="@layout/fragment_04" />
+
+    <fragment
+        android:id="@+id/nav_five"
+        android:name="com.verma.android.template.ui.menu.Menu05Fragment"
+        android:label="@string/menu_nav_five"
+        tools:layout="@layout/fragment_05" />
+
+    <fragment
+        android:id="@+id/nav_six"
+        android:name="com.verma.android.template.ui.menu.Menu06Fragment"
+        android:label="@string/menu_nav_six"
+        tools:layout="@layout/fragment_06" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.verma.android.template.ui.menu.MenuSettingFragment"
+        android:label="@string/menu_nav_setting"/>
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.verma.android.common.viewmodel.WebFragment"
+        android:label="@string/menu_nav_faq"
+        tools:layout="@layout/fragment_web_view">
+        <argument
+            android:name="urlLink"
+            android:defaultValue="https://sites.google.com/view/notepadprivacypolicy/faq"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_terms_of_service"
+        android:name="com.verma.android.common.viewmodel.WebFragment"
+        android:label="@string/menu_nav_terms_of_service"
+        tools:layout="@layout/fragment_web_view">
+        <argument
+            android:name="urlLink"
+            android:defaultValue="https://sites.google.com/view/notepadprivacypolicy/termsofservices"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_privacy_policy"
+        android:name="com.verma.android.common.viewmodel.WebFragment"
+        android:label="@string/menu_nav_privacy_policy"
+        tools:layout="@layout/fragment_web_view">
+        <argument
+            android:name="urlLink"
+            android:defaultValue="https://sites.google.com/view/notepadprivacypolicy/home"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.verma.android.template.ui.menu.aboutus.AboutUsFragment"
+        android:label="@string/menu_nav_about_us"
+        tools:layout="@layout/fragment_about_us" />
+</navigation>
