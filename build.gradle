@@ -11,7 +11,7 @@ buildscript {
         min_sdk_version = 28
 
         android_gradle_plugin_version = '4.2.1'
-        espresso_version = '3.3.0'
+        espresso_version = '3.5.1'
         google_services_version = "4.3.3"
         play_services_version = '22.2.0'
         google_api_android_version = '1.26.0'
