@@ -109,9 +109,7 @@ public class SplashActivity extends AppCompatActivity implements SharedKey {
                     ((App) getApplication()).sharedPreferencesService.setBoolean(SharedKey.KEY_BOOLEAN_SETTING_KEEP_ME_LOGIN,false);
                     //Do Task OnBoarding Done
                     Intent data = result.getData();
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                    close();
                 }
             });
 }

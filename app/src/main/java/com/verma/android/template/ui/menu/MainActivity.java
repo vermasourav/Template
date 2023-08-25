@@ -131,17 +131,13 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         } else {
-            //TODO
-           /* switch (item.getItemId()) {
-                case R.id.action_rate_us:
-                    addRateMe();
-                    return true;
-                case R.id.action_share_me:
-                    shareMe();
-                    return true;
-                default:
-                    break;
-            }*/
+            if(item.getItemId() == R.id.action_rate_us){
+                addRateMe();
+                return true;
+            }else if(item.getItemId() == R.id.action_share_me){
+                shareMe();
+                return true;
+            }
         }
         return super.onOptionsItemSelected(item);
 
