@@ -2,149 +2,38 @@
   "groups": [
     {
       "from": "",
-      "visible": true, "name": "Cupcake",
-      "image_url": "ic_launcher",
-      "childs": []
-    },
-
-
-    {
-      "from": "",
-      "visible": true, "name": "Donut",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "Eclair",
-      "image_url": "",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "Froyo",
-      "image_url": "",
-      "childs": []
-    },
-
-
-
-    {
-      "from": "",
-      "visible": true, "name": "Gingerbread",
-      "image_url": "",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "Honeycomb",
-      "image_url": "",
+      "visible": true, "name": "Residents",
+      "image_url": "https://www.nicepng.com/png/detail/866-8661127_icon-social-residents-icon-png.png",
       "childs": []
     },{
       "from": "",
-      "visible": true, "name": "Ice Cream Sandwich",
-      "image_url": "",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "Jelly Bean",
-      "image_url": "",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "KitKat",
-      "image_url": "",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "Lollipop",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "Marshmallow",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true, "name": "Nougat",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
-      "childs": []
-    },
-    {
-      "from": "",
-      "visible": true,  "name": "Oreo",
-      "image_url": "",
+      "visible": true, "name": "Notice Board",
+      "image_url": "https://www.nicepng.com/png/detail/938-9385876_will-print-to-a3-okul-ncesi-dolap-etiketleri.png",
       "childs": []
     },{
       "from": "",
-      "visible": true,  "name": "Pie",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "visible": true, "name": "Bill",
+      "image_url": "https://www.nicepng.com/png/detail/73-739169_svg-free-download-bills-clipart-energy-bill-electricity.png",
       "childs": []
     },{
       "from": "",
-      "visible": true,  "name": "Android 10.0",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "visible": true, "name": "Help Desk",
+      "image_url": "https://www.nicepng.com/png/detail/242-2425781_rmm-and-business-it-asset-management-5-excellent.png",
       "childs": []
     },{
       "from": "",
-      "visible": true,  "name": "Android 11",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "visible": true, "name": "Emergency No's",
+      "image_url": "https://www.nicepng.com/png/detail/329-3293661_emergency-icon-transparent-icon-emergency.png",
       "childs": []
     },{
       "from": "",
-      "visible": true,  "name": "Android 12",
-      "image_url": "https://avatars.githubusercontent.com/u/19544802",
+      "visible": true, "name": "Resident Directory",
+      "image_url": "https://www.nicepng.com/png/detail/329-3293661_emergency-icon-transparent-icon-emergency.png",
       "childs": []
     },{
       "from": "",
-      "visible": true,  "name": "Android 13",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "Android 14",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "Sourav Kumar Verma",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "F",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "I",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "H",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "J",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "K",
-      "image_url": "",
-      "childs": []
-    },{
-      "from": "",
-      "visible": true,  "name": "L",
-      "image_url": "",
+      "visible": true, "name": "Profile",
+      "image_url": "https://www.nicepng.com/png/detail/202-2024687_profile-icon-for-the-politics-category-profile-icon.png",
       "childs": []
     }
   ]
