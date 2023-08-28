@@ -18,6 +18,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -235,19 +236,26 @@ public class MainActivity extends AppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                // Back is pressed... Finishing the activity
-                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-                builder.setMessage(R.string.text_exit_request);
-                builder.setCancelable(false)
-                        .setPositiveButton(getString(android.R.string.ok), (dialog, which) -> {
-                                    finish();
-                                }
-                        )
-                        .setNegativeButton(getString(android.R.string.no), null);
-                builder.show();
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                } else {
+                    showExitAlert();
+                    // Back is pressed... Finishing the activity
+                }
             }
         });
     }
+
+    private void showExitAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(R.string.text_exit_request);
+        builder.setCancelable(false)
+                .setPositiveButton(getString(android.R.string.ok), (dialog, which) -> finish())
+                .setNegativeButton(getString(android.R.string.no), null);
+        builder.show();
+    }
+
     public Context getContext(){
         return this;
     }
