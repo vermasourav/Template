@@ -20,4 +20,12 @@ public class Menu06Fragment extends MenuBaseFragment {
         setHasOptionsMenu(false);
         return binding.getRoot();
     }
+    @Override
+    public String getScreenName() {
+        return getString(R.string.menu_nav_six);
+    }
+    @Override
+    public void initComponent() {
+
+    }
 }

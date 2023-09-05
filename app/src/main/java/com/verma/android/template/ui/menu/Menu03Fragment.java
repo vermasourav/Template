@@ -21,5 +21,13 @@ public class Menu03Fragment extends MenuBaseFragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_03, container, false);
         return binding.getRoot();
     }
+    @Override
+    public String getScreenName() {
+        return getString(R.string.menu_nav_three);
+    }
+    @Override
+    public void initComponent() {
+
+    }
 
 }

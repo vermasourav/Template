@@ -15,10 +15,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.verma.android.common.viewmodel.AboutUsViewModel;
 import com.verma.android.template.R;
 import com.verma.android.template.databinding.FragmentAboutUsBinding;
+import com.verma.android.template.ui.menu.MenuBaseFragment;
 import com.verma.android.template.ui.menu.aboutus.adapters.AboutRecyclerviewAdapter;
 
 
-public class AboutUsFragment extends Fragment {
+public class AboutUsFragment extends MenuBaseFragment {
 
     private FragmentAboutUsBinding binding;
     private AboutUsViewModel viewModel;
@@ -26,6 +27,16 @@ public class AboutUsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_about_us, container, false);
+        return binding.getRoot();
+
+    }
+    @Override
+    public String getScreenName() {
+        return getString(R.string.menu_nav_about_us);
+    }
+
+    @Override
+    public void initComponent() {
         viewModel = new AboutUsViewModel();
         viewModel.init(getContext());
         binding.setViewModel(viewModel);
@@ -37,7 +48,6 @@ public class AboutUsFragment extends Fragment {
         binding.officeAboutRecyclerView.setAdapter(adapter);
         binding.srl.setRefreshing(true);
         binding.srl.setRefreshing(false);
-        return binding.getRoot();
 
     }
 }

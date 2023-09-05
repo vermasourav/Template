@@ -21,5 +21,13 @@ public class Menu02Fragment extends MenuBaseFragment {
         setHasOptionsMenu(false);
         return binding.getRoot();
     }
+    @Override
+    public String getScreenName() {
+        return getString(R.string.menu_nav_two);
+    }
+    @Override
+    public void initComponent() {
+
+    }
 
 }

@@ -5,7 +5,9 @@ import static com.verma.android.template.App.BASEURL;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +15,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.verma.android.deps.DaggerDeps;
 import com.verma.android.deps.module.AppModule;
 import com.verma.android.deps.module.NetworkModule;
@@ -22,8 +25,10 @@ import org.jetbrains.annotations.NotNull;
 
 import timber.log.Timber;
 
-public class MenuBaseFragment extends Fragment {
-
+public abstract class MenuBaseFragment extends Fragment {
+    private static final String TAG = "MenuBaseFragment";
+    public abstract String getScreenName();
+    public abstract void initComponent();
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +36,25 @@ public class MenuBaseFragment extends Fragment {
                 .networkModule(new NetworkModule(BASEURL))
                 .appModule(new AppModule(App.from(getContext())))
                 .build().inject(this);
+        setAnalytics();
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initComponent();
+    }
+
+
+    private void setAnalytics() {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.SCREEN_NAME, getScreenName());
+        bundle.putString(FirebaseAnalytics.Param.SCREEN_CLASS, super.getClass().getSimpleName());
+        //TODO Enable it
+        //FirebaseAnalytics.getInstance(requireContext()).logEvent(FirebaseAnalytics.Event.SCREEN_VIEW, bundle);
+        Log.d(TAG, "setAnalytics: getScreenName - "+ getScreenName() + " Classname " +super.getClass().getSimpleName());
+
+    }
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         Timber.d("onConfigurationChanged");

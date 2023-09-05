@@ -21,4 +21,13 @@ public class Menu04Fragment extends MenuBaseFragment {
 
         return binding.getRoot();
     }
+
+    @Override
+    public String getScreenName() {
+        return getString(R.string.menu_nav_four);
+    }
+    @Override
+    public void initComponent() {
+
+    }
 }

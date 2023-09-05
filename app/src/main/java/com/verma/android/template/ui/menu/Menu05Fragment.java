@@ -21,4 +21,12 @@ public class Menu05Fragment extends MenuBaseFragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_05, container, false);
         return binding.getRoot();
     }
+    @Override
+    public String getScreenName() {
+        return getString(R.string.menu_nav_five);
+    }
+    @Override
+    public void initComponent() {
+
+    }
 }

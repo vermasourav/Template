@@ -31,12 +31,19 @@ public class Menu00Fragment extends MenuBaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_00, container, false);
         setHasOptionsMenu(false);
-        setupDashboard();
         return binding.getRoot();
+    }
+    @Override
+    public String getScreenName() {
+        return getString(R.string.menu_nav_home);
+    }
+    @Override
+    public void initComponent() {
+        setupDashboard();
     }
 
 
-    public void setupDashboard() {
+    private void setupDashboard() {
         setupGrid();
         DashBoardManager dashBoardManager = new DashBoardManager();
         ArrayList<DashBoardItem> dashBoardItems = dashBoardManager.getDashBoardItems(getContext(),"content_dashboard.json");
@@ -61,6 +68,5 @@ public class Menu00Fragment extends MenuBaseFragment {
         }
         binding.dashBoardGrid.setColumnCount(spanCount);
     }
-
 
 }
