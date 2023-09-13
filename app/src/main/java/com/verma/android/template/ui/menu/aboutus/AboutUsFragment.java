@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,5 +48,10 @@ public class AboutUsFragment extends MenuBaseFragment {
         binding.srl.setRefreshing(true);
         binding.srl.setRefreshing(false);
 
+    }
+
+    @Override
+    public void setOptionMenu(boolean hasMenu) {
+        setOptionMenu(false,null);
     }
 }

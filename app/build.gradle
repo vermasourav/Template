@@ -84,8 +84,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
@@ -99,7 +99,7 @@ dependencies {
     api "com.jakewharton.timber:timber:$timber_version"
     implementation "com.google.code.gson:gson:$gson_version"
 
-    implementation "com.google.android.gms:play-services-auth:20.6.0"
+    implementation "com.google.android.gms:play-services-auth:20.7.0"
     implementation "com.google.android.gms:play-services-drive:17.0.0"
     implementation 'com.google.android.gms:play-services-location:21.0.1' // Mandatory
 
@@ -108,9 +108,9 @@ dependencies {
     annotationProcessor 'com.google.dagger:dagger-compiler:2.26'
 
     // Add the Firebase Crashlytics SDK.
-    implementation 'com.google.firebase:firebase-crashlytics:18.4.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.4.1'
     implementation 'com.google.firebase:firebase-analytics:21.3.0'
-    implementation 'com.google.firebase:firebase-perf:20.4.0'
+    implementation 'com.google.firebase:firebase-perf:20.4.1'
 
     //About Us
     implementation 'com.squareup.picasso:picasso:2.71828'

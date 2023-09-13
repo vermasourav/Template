@@ -13,7 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuHost;
+import androidx.core.view.MenuProvider;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.verma.android.deps.DaggerDeps;
@@ -29,6 +32,7 @@ public abstract class MenuBaseFragment extends Fragment {
     private static final String TAG = "MenuBaseFragment";
     public abstract String getScreenName();
     public abstract void initComponent();
+    public abstract void setOptionMenu(boolean hasMenu );
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,13 @@ public abstract class MenuBaseFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initComponent();
+    }
+
+    public  void setOptionMenu(boolean hasMenu, MenuProvider menuProvider){
+        if(hasMenu && null != menuProvider){
+            MenuHost menuHost = requireActivity();
+            menuHost.addMenuProvider(menuProvider, getViewLifecycleOwner(), Lifecycle.State.RESUMED);
+        }
     }
 
 

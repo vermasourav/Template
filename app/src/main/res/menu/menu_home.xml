@@ -10,7 +10,7 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/action_share_me"
-        android:orderInCategory="100"
+        android:orderInCategory="101"
         android:title="@string/menu_share_me"
         android:icon="@android:drawable/ic_menu_share"
         app:showAsAction="ifRoom" />

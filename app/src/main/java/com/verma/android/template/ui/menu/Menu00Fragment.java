@@ -3,12 +3,15 @@ package com.verma.android.template.ui.menu;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.MenuProvider;
 import androidx.databinding.DataBindingUtil;
-import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.verma.android.dashboard.DashBoardItem;
 import com.verma.android.dashboard.DashBoardManager;
@@ -17,8 +20,6 @@ import com.verma.android.template.R;
 import com.verma.android.template.databinding.Fragment00Binding;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 import timber.log.Timber;
 
@@ -30,9 +31,28 @@ public class Menu00Fragment extends MenuBaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_00, container, false);
-        setHasOptionsMenu(false);
+        setOptionMenu(true);
         return binding.getRoot();
     }
+
+    @Override
+    public void setOptionMenu(boolean hasMenu) {
+        setOptionMenu(hasMenu, new MenuProvider() {
+            @Override
+            public void onCreateMenu(@NonNull Menu menu, @NonNull MenuInflater menuInflater) {
+                menuInflater.inflate(R.menu.main00, menu);
+            }
+
+            @Override
+            public boolean onMenuItemSelected(@NonNull MenuItem menuItem) {
+                if(menuItem.getItemId() == R.id.action_rate_us){
+                    return true;
+                }
+                return false;
+            }
+        });
+    }
+
     @Override
     public String getScreenName() {
         return getString(R.string.menu_nav_home);
