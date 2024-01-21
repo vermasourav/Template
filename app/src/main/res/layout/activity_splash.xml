@@ -75,6 +75,14 @@
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/fifth_line"
             android:background="@drawable/splash_line" />
+        <View
+            android:id="@+id/seven_line"
+            android:layout_width="20dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/sixth_line"
+            android:backgroundTint="@android:color/holo_purple"
+            android:background="@drawable/splash_line" />
     </RelativeLayout>
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -141,7 +149,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9"
         app:fontFamily="sans-serif-black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-    android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         tools:text="Version" />
 </androidx.constraintlayout.widget.ConstraintLayout>

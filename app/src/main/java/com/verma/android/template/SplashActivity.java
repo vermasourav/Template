@@ -71,6 +71,7 @@ public class SplashActivity extends AppCompatActivity implements SharedKey {
         binding.fifthLine.setAnimation(topAnimantion);
         binding.fifthLine.setAnimation(topAnimantion);
         binding.sixthLine.setAnimation(topAnimantion);
+        binding.sevenLine.setAnimation(topAnimantion);
         binding.appTitle.setAnimation(middleAnimation);
         binding.appVersion.setAnimation(bottomAnimation);
 

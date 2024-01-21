@@ -68,7 +68,7 @@ public class Menu00Fragment extends MenuBaseFragment {
         DashBoardManager dashBoardManager = new DashBoardManager();
         ArrayList<DashBoardItem> dashBoardItems = dashBoardManager.getDashBoardItems(getContext(),"content_dashboard.json");
         //Collections.sort(dashBoardItems, Comparator.comparing(o -> o.getName().toLowerCase()));
-        dashBoardManager.setupDashboard(getContext(),binding.dashBoardGrid,3,dashBoardItems,dashboardClickListener);
+        dashBoardManager.setupDashboard(getContext(),binding.dashBoardGrid,2,dashBoardItems,dashboardClickListener);
     }
 
     DashboardClickListener dashboardClickListener = (v, dashBoardItem) -> {

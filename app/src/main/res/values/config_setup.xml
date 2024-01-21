@@ -30,7 +30,6 @@
     <bool name="feature_menu_terms_of_service">true</bool>
     <bool name="feature_menu_version">true</bool>
 
-
     <bool name="feature_rate_us">true</bool>
     <bool name="feature_share_menu">true</bool>
 

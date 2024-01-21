@@ -260,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
         return this;
     }
 
+    @Deprecated
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
