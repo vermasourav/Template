@@ -9,7 +9,7 @@
 <resources>
     <integer name="splash_time_out">5000</integer>
     <color name="appBackground">@android:color/white</color>
-    <string name="my_name">KARN Amisha</string>
+    <string name="my_name">V3RMA Kashvi</string>
 
     <string name="ads_id">ca-app-pub-5937141550883860~5553188392</string>
     <string name="ads_unit_id">ca-app-pub-5937141550883860/8603707777</string>

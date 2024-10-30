@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.util.Base64;
 import android.view.Gravity;
 import android.widget.Toast;
+import com.verma.android.template.BuildConfig;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,6 +30,7 @@ import timber.log.Timber;
 public class Utils {
     private static final String TAG = "Utils";
     private static Utils instance;
+    public static boolean  IS_DEBUG = BuildConfig.DEBUG;
 
     private Utils() {
         //Do Nothing
