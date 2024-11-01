@@ -23,8 +23,6 @@
 
         <activity android:name=".SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:exported="true">
             <intent-filter>

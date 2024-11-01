@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -90,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
            // setupBackPress();
         } catch (Exception e) {
             //DO Nothing
-            Timber.d("onCreate: ");
+            Timber.d("onCreate: %s", e.getMessage());
         }
 
     }
@@ -110,8 +112,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initAds() {
-       // MobileAdsManager.getInstance().initAds(this, findViewById(R.id.adView));
-        //MobileAdsManager.getInstance().showAds(findViewById(R.id.adView));
+        // MobileAdsManager.getInstance().initAds(this, findViewById(R.id.adView));
+        // MobileAdsManager.getInstance().showAds(findViewById(R.id.adView));
     }
 
 
@@ -181,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
     private String getVersion() {
         try {
             String verName = BuildConfig.VERSION_NAME;
-            return getString(R.string.app_name) + " Version " + " - " + verName;
+            return getString(R.string.app_name) + " Version-" + verName;
         } catch (Exception e) {
             return "";
         }
@@ -213,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
                 .setShowLaterButton(true) // default true.
                 .setDebug(true) // default false.
                 .setCancelable(false) // default false.
-                .setOnClickButtonListener(which -> Timber.d("addRateMe: " + which))
+                .setOnClickButtonListener(which -> Timber.d("addRateMe: %s", which))
                 .setTitle(R.string.new_rate_dialog_title)
                 .setTextLater(R.string.new_rate_dialog_later)
                 .setTextNever(R.string.new_rate_dialog_never)

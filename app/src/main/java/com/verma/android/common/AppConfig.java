@@ -58,9 +58,33 @@ public class AppConfig {
         featureMenuTermsOfService = isFeaturesEnable(pContext, R.bool.feature_menu_terms_of_service);
         featureMenuVersion = isFeaturesEnable(pContext, R.bool.feature_menu_version);
 
+        if(Utils.IS_DEBUG){
+            Log.d(TAG, "AppConfig: "+ this.toString());
+        }
+
     }
 
     public boolean isFeaturesEnable(Context pContext, int features) {
         return pContext.getResources().getBoolean(features);
+    }
+
+    @Override
+    public String toString() {
+        return "AppConfig{" +
+                "featureRateUs=" + featureRateUs +
+                ", featureShareMenu=" + featureShareMenu +
+                ", featureMenuOne=" + featureMenuOne +
+                ", featureMenuTwo=" + featureMenuTwo +
+                ", featureMenuThree=" + featureMenuThree +
+                ", featureMenuFour=" + featureMenuFour +
+                ", featureMenuFive=" + featureMenuFive +
+                ", featureMenuAboutUs=" + featureMenuAboutUs +
+                ", featureMenuSix=" + featureMenuSix +
+                ", featureMenuSetting=" + featureMenuSetting +
+                ", featureMenuFaq=" + featureMenuFaq +
+                ", featureMenuPrivacy=" + featureMenuPrivacy +
+                ", featureMenuTermsOfService=" + featureMenuTermsOfService +
+                ", featureMenuVersion=" + featureMenuVersion +
+                '}';
     }
 }

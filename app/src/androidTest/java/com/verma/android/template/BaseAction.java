@@ -8,7 +8,6 @@
 
 package com.verma.android.template;
 
-
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 
 import android.content.Context;
@@ -85,6 +84,7 @@ abstract class BaseAction {
         String nameOfCurrMethod = new Throwable()
                 .getStackTrace()[at]
                 .getMethodName();
+        Log.d(TAG, "getMethodName: "+ nameOfCurrMethod);
         return nameOfCurrMethod;
     }
 

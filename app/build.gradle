@@ -1,9 +1,11 @@
 plugins {
     id 'com.android.application'
+   // id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 apply plugin: "androidx.navigation.safeargs"
 
-apply from: rootProject.file('./app/signing.gradle')
+//apply from: rootProject.file('./app/signing.gradle')
 
 android {
     namespace 'com.verma.android.template'
@@ -17,7 +19,6 @@ android {
         versionName rootProject.version_name
 
         multiDexEnabled true
-        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         setProperty("archivesBaseName", applicationId + "-v" + versionCode + "(" + versionName + ")")
 
@@ -36,7 +37,7 @@ android {
             debuggable false
             jniDebuggable false
             renderscriptDebuggable false
-            signingConfig signingConfigs.KEY
+            //signingConfig signingConfigs.KEY
         }
         debug {
             debuggable true
@@ -44,8 +45,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     buildFeatures {
         viewBinding true
@@ -58,18 +59,17 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation fileTree(dir: "libs", include: ["*.aar"])
 
-
     // Assertions
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.ext:truth:1.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.ext:truth:1.6.0'
     androidTestImplementation 'com.google.truth:truth:1.1.3'
     androidTestImplementation ('tools.fastlane:screengrab:2.0.0',{
         exclude group: 'com.android.support' , module: 'support-annotations'
     })
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
     // Espresso dependencies
     implementation 'com.jraska:falcon:2.2.0'
@@ -81,13 +81,14 @@ dependencies {
     androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$espresso_version"
 
 
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.8.7'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
 
@@ -99,22 +100,23 @@ dependencies {
     api "com.jakewharton.timber:timber:$timber_version"
     implementation "com.google.code.gson:gson:$gson_version"
 
-    implementation "com.google.android.gms:play-services-auth:20.7.0"
+    implementation "com.google.android.gms:play-services-auth:21.2.0"
     implementation "com.google.android.gms:play-services-drive:17.0.0"
-    implementation 'com.google.android.gms:play-services-location:21.0.1' // Mandatory
+    implementation 'com.google.android.gms:play-services-location:21.3.0'
 
 
     implementation 'com.google.dagger:dagger:2.28.3'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.26'
 
-    // Add the Firebase Crashlytics SDK.
-    implementation 'com.google.firebase:firebase-crashlytics:18.4.1'
-    implementation 'com.google.firebase:firebase-analytics:21.3.0'
-    implementation 'com.google.firebase:firebase-perf:20.4.1'
+    // Add the Firebase Crashlytics SDK amd Crashlytics NDK.
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    implementation("com.google.firebase:firebase-crashlytics")
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-perf")
+    implementation("com.google.firebase:firebase-crashlytics-ndk")
 
     //About Us
     implementation 'com.squareup.picasso:picasso:2.71828'
-
 
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
@@ -127,18 +129,9 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
-    implementation 'commons-io:commons-io:2.8.0'
+    implementation 'commons-io:commons-io:2.13.0'
 
     implementation "com.github.vermasourav:OnBoarding:1.0.7"
-    implementation "com.github.vermasourav:DashBoard:1.0.8"
-
-    constraints {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
-            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
-        }
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
-            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
-        }
-    }
+    implementation "com.github.vermasourav:DashBoard:1.0.9"
 
 }

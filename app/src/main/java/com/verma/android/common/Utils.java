@@ -79,7 +79,7 @@ public class Utils {
             clipboard.setPrimaryClip(clip);
         }
         Toast toast = Toast.makeText(pContext.getApplicationContext(), "Your Text is copied", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM | Gravity.RIGHT, 50, 50);
+        toast.setGravity(Gravity.BOTTOM | Gravity.END, 50, 50);
         toast.show();
     }
 

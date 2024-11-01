@@ -12,14 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="60dp">
-
+        android:paddingTop="?attr/actionBarSize">
 
         <RelativeLayout
             android:background="@color/appBackground"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/avatar"
@@ -30,7 +28,7 @@
                 android:layout_marginTop="5dp"
                 android:scaleType="centerCrop"
                 tools:visibility="visible"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:src="@drawable/ic_launcher"
                 tools:src="@tools:sample/avatars"
                 android:contentDescription="@string/empty" />
@@ -54,7 +52,7 @@
                 android:layout_centerHorizontal="true"
                 android:text=""
                 tools:visibility="visible"
-                android:visibility="invisible"
+                android:visibility="visible"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/black"
                 tools:text="@tools:sample/full_names" />

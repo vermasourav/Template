@@ -1,5 +1,6 @@
 package com.verma.android.template.ui.rate;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -24,6 +25,7 @@ final class UriHelper {
         return packageName == null ? null : Uri.parse(AMAZON_APP_STORE + packageName);
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
     static boolean isPackageExists(Context context, String targetPackage) {
         PackageManager pm = context.getPackageManager();
         List<ApplicationInfo> packages = pm.getInstalledApplications(0);

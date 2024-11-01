@@ -1,5 +1,6 @@
 package com.verma.android.template;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,11 +23,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity implements SharedKey {
-    private int splashTimeOut = 1000;
+    public int splashTimeOut = 1000;
 
     //Animations
-    Animation topAnimantion;
+    Animation topAnimation;
     Animation bottomAnimation;
     Animation middleAnimation;
 
@@ -61,21 +63,23 @@ public class SplashActivity extends AppCompatActivity implements SharedKey {
 
     private void initSplash() {
         //Animation Calls
-        topAnimantion = AnimationUtils.loadAnimation(this, R.anim.splash_top_animation);
+        topAnimation = AnimationUtils.loadAnimation(this, R.anim.splash_top_animation);
         bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.splash_bottom_animation);
         middleAnimation = AnimationUtils.loadAnimation(this, R.anim.splash_middle_animation);
-        //-----------Setting Animations to the elements of SplashScreen-------- -
-        binding.fifthLine.setAnimation(topAnimantion);
-        binding.secondLine.setAnimation(topAnimantion);
-        binding.thirdLine.setAnimation(topAnimantion);
-        binding.fifthLine.setAnimation(topAnimantion);
-        binding.fifthLine.setAnimation(topAnimantion);
-        binding.sixthLine.setAnimation(topAnimantion);
-        binding.sevenLine.setAnimation(topAnimantion);
+        /*
+            ----------- Setting Animations to the elements of SplashScreen --------
+        */
+
+        binding.fifthLine.setAnimation(topAnimation);
+        binding.secondLine.setAnimation(topAnimation);
+        binding.thirdLine.setAnimation(topAnimation);
+        binding.fifthLine.setAnimation(topAnimation);
+        binding.fifthLine.setAnimation(topAnimation);
+        binding.sixthLine.setAnimation(topAnimation);
+        binding.sevenLine.setAnimation(topAnimation);
         binding.appTitle.setAnimation(middleAnimation);
         binding.appVersion.setAnimation(bottomAnimation);
-
-        binding.appSubtitle.setAnimation(topAnimantion);
+        binding.appSubtitle.setAnimation(topAnimation);
 
 
     }
@@ -108,7 +112,7 @@ public class SplashActivity extends AppCompatActivity implements SharedKey {
             new ActivityResultContracts.StartActivityForResult(),result -> {
                 if (result.getResultCode() == Activity.RESULT_OK) {
                     ((App) getApplication()).sharedPreferencesService.setBoolean(SharedKey.KEY_BOOLEAN_SETTING_KEEP_ME_LOGIN,false);
-                    //Do Task OnBoarding Done
+                    //TODO Task OnBoarding Done
                     Intent data = result.getData();
                     close();
                 }
